@@ -294,7 +294,7 @@ local function scoreBoard(pn)
 		InitCommand=function (self) self:xy(25+10-(frameWidth/2),5):playcommand("ModifyAvatar") end;
 		ModifyAvatarCommand=function(self)
 			self:visible(true)
-			self:LoadBackground(THEME:GetPathG("","../"..getAvatarPath(pn)));
+			self:Load(LoadModule("Options.GetProfileData.lua")(pn)["Image"])
 			self:zoomto(50,50)
 		end
 	}
