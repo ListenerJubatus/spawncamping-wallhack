@@ -1,21 +1,16 @@
-# spawncamping-wallhack
-A WIP Stepmania 5 theme aimed primarily for KB players.  
-<a href="http://imgur.com/a/RpFvQ" target="_blank">Screenshots</a>
+## What the heck is this
 
-Requirements: StepMania 5.0.12 or later.
+an unofficial fork of spawncamping-wallhack designed to tweak it more for StepMania 5.3
 
----
-### Acknowledgements
-* The StepMania 5 devs (notably freem and Kyzentun) for making this possible in the first place.
-* People in #stepmania-devs and the Rhythm gamers discord for feedback.
-* Some of the theme elements are adapted from the default theme or this by jousway https://github.com/Jousway/Stepmania-Zpawn
-* Kyzentun's prefs system is used for setting various profile/theme preferences. (which is now available in _fallback for 5.1)
+skulk: group of foxes
+Requirements: StepMania 5.3 or later.
 
 ---
 ### Issues
+ * Mouse input is broken and needs to be migrated to the new 5.3 input code.
+ * In general a lot of things should be migrated to 5.3 modules so we can have saner implementations of things like SL-OutFox.
  * PIU Scores are broken since there's no way to get the total # of checkpoints.
  * Courses are disabled.
- * plus whatever is on the issue tracker
 
 ---
 ### Usage Guide (Not updated for the 5.0.12 branch yet.)   
@@ -29,18 +24,7 @@ To completely reset to default values, delete `%appdata%\StepMania 5\Save\_fallb
 
 
 * **Avatars**   
-You can set an avatar to a profile that is then displayed throughout the theme.
-  * Adding new avatars   
-  Open up the main theme folder, and navigate to this directory:   
-  ```<sc-wh Theme Folder>\Graphics\Player avatar```   
-  In this folder you can place any images that you wish to use, they should be at least 50px or larger and have a 1:1 aspect ratio.    
-  Also, **DO NOT DELETE _fallback.png**.   
-  * Setting avatars ingame   
-  Once the images have been added, start up stepmania and head over to ScreenSelectMusic.   
-  From this screen, you can either click the avatar, or quickly press the ```<Select>``` key twice.
-  A new screen should come up on top of the current one with all the currently available images.   
-  Use ```<Left>``` or ```<Right>``` to navigate, and press ```<Start>``` to update with the new image.   
-  (You may also press ```<Back>``` to cancel without any changes.)   
+You can set an avatar to a profile that is then displayed throughout the theme. I changed it to use the native StepMania 5.3 avatar module, so if you have one set up in Soundwaves it should work here too.
 
 
 * **Score Types**   
