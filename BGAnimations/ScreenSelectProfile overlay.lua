@@ -32,12 +32,10 @@ function GetLocalProfiles(pn)
 			};
 
 			Def.Sprite {
-				InitCommand=cmd(visible,true;halign,0;xy,-98,-2;ztest,true;);
-				BeginCommand=cmd(queuecommand,"ModifyAvatar");
-				ModifyAvatarCommand=function(self)
-					self:finishtweening();
-					self:LoadBackground(THEME:GetPathG("","../"..getAvatarPathFromProfileID(profileID)));
-					self:zoomto(30,30)
+				InitCommand=function(self) self:visible(true):halign(0):xy(-98,-2):ztest(true):zoomto(30,30) end,
+				Texture=LoadModule("Options.GetProfileData.lua")(p,true)["Image"],
+				OnCommand=function(self)
+					self:finishtweening()
 				end;	
 			};
 
