@@ -59,14 +59,9 @@ local function avatarFrame(pn)
 
 	t[#t+1] = Def.Sprite {
 		InitCommand = function(self)
-			self:halign(0):valign(0)
-		end;
-		BeginCommand = function(self) self:queuecommand('ModifyAvatar') end;
-		ModifyAvatarCommand=function(self)
-			self:finishtweening();
-			self:LoadBackground(THEME:GetPathG("","../"..getAvatarPath(pn)));
-			self:zoomto(50,50)
-		end;	
+			self:halign(0):valign(0):zoomto(50,50)
+		end,
+		Texture=LoadModule("Options.GetProfileData.lua")(pn)["Image"]
 	};
 
 	t[#t+1] = LoadFont("Common Normal") .. {
