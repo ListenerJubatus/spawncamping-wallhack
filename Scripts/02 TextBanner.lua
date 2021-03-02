@@ -17,7 +17,7 @@ function TextBannerAfterSet(self,param)
 	
 	if Subtitle:GetText() == "" then
 		Title:maxwidth(mainMaxWidth/0.75)
-		Title:xy(10,-8)
+		Title:xy(10,-6)
 		Title:zoom(0.75)
 		
 		-- hide so that the game skips drawing.
@@ -25,7 +25,7 @@ function TextBannerAfterSet(self,param)
 
 		Artist:zoom(0.35)
 		Artist:maxwidth(artistMaxWidth/0.35)
-		Artist:xy(10,8)
+		Artist:xy(10,10)
 	else
 		Title:maxwidth(mainMaxWidth/0.55)
 		Title:xy(10,-10)
@@ -38,6 +38,6 @@ function TextBannerAfterSet(self,param)
 
 		Artist:zoom(0.35)
 		Artist:maxwidth(artistMaxWidth/0.35)
-		Artist:xy(10,10)
+		Artist:xy(10,12)
 	end
 end
